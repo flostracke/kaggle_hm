@@ -1,0 +1,19 @@
+stages:
+  prepare_data:
+    cmd: python Code/00_data_prep.py
+    deps:
+      - Code/00_data_prep.py
+      - Rawdata/articles.csv"
+      - Rawdata/transactions_train.csv
+      - Rawdata/images/*.jpg
+     
+    outs:
+      - Data/processed_articles.parquet
+      - Data/processed_transactions.parquet
+
+  
+      
+  
+
+
+

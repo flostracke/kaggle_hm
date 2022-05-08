@@ -1,6 +1,4 @@
 import pandas as pd
-import glob
-
 
 # load and prepare the article data
 df_articles = pd.read_csv("../Rawdata/articles.csv")
