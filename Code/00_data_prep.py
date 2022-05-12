@@ -1,4 +1,5 @@
 import pandas as pd
+import glob
 
 # load and prepare the article data
 df_articles = pd.read_csv("../Rawdata/articles.csv")
@@ -13,6 +14,8 @@ df_paths["article_id"] = df_paths["path"].str[-14:].str.replace(".jpg", "", rege
 # only keep articles with images
 df_articles = df_articles.merge(df_paths, on="article_id", how="inner")
 df_articles.to_parquet("../Data/processed_articles.parquet", index=False)
+
+df_articles.head()
 
 # load and prepare the transaction data
 df_transactions = pd.read_csv("../Rawdata/transactions_train.csv")
