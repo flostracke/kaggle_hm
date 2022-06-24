@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  prepare_data:
+    cmd: Rscript Code/prep.R
+    deps:
+    - path: Code/prep.R
+      md5: d77a1ebfcab266207099699cb545f6d0
+      size: 1191
+    - path: Rawdata/articles.csv
+      md5: f193ef0f582e8476ebb613d143742d0f
+      size: 36127865
+    - path: Rawdata/images/
+      md5: 0e788812f5351362df3d8aece084ae46.dir
+      size: 30557052877
+      nfiles: 105101
+    - path: Rawdata/transactions_train.csv
+      md5: 1c2324373fd36542f4e6a99eedd1a240
+      size: 3488002253
+    outs:
+    - path: Data/processed_articles.parquet
+      md5: 7b6691c85b490b4728475a6698e580cf
+      size: 6311150
